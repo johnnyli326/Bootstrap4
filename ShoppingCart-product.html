@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="SHORTCUT ICON" href="https://cdn2.iconfinder.com/data/icons/hot-sale-flat/64/store_shop_sale_shop-512.png" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="custom.css">
+  <title>ShoppingCart-Product</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-heart mr-1 text-info"></i>六角血拼賣賣</a>
+    <div class="dropdown ml-auto" style="z-index: 10000">
+      <a class="btn btn-sm btn-cart" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-cart-plus text-dark fa-2x"></i>
+        <span class="badge badge-pill badge-danger">66</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right px-4 py-3 dropdown-media" style="min-width: 300px;">
+        <h6>已選擇商品</h6>
+        <table class="table table-sm">
+          <tbody>
+            <tr>
+              <th colspan="2" class="text-center">商品名稱</th>
+              <th>數量</th>
+              <th class="text-center">小計</th>
+            </tr>
+            <tr>
+              <td class="align-middle text-center" width="10%"><a href="#" class="btn btn-link" data-toggle="modal" data-target="#removeModal" data-title="金牌西裝"><i class="far fa-trash-alt text-secondary"></i></a></td>
+              <td>
+                <a href="#" class="btn btn-link"><img class="small mr-3 img-thumbnail" src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">金牌西裝</a>
+              </td>
+              <td class="pt-2">1 件</td>
+              <td class="pt-2 text-right"><strong>$520</strong></td>
+            </tr>
+            <tr>
+              <td class="align-middle text-center"><a href="#" class="btn btn-link" data-toggle="modal" data-target="#removeModal" data-title="金牌女裝"><i class="far fa-trash-alt text-secondary"></i></a></td>
+              <td>
+                <a href="#" class="btn btn-link"><img class="small mr-3 img-thumbnail" src="https://images.unsplash.com/photo-1517836034914-40ef8d668510?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">金牌女裝</a>
+              </td>
+              <td class="pt-2">1 件</td>
+              <td class="pt-2 text-right"><strong>$480</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">運費</td>
+              <td class="text-right"><strong>$60</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">合計</td>
+              <td class="text-right"><strong>$1,060</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="ShoppingCart-checkout.html" class="btn btn-block btn-primary my-2">結帳去</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <nav aria-label="breadcrumb" class="">
+      <ol class="breadcrumb bg-transparent pl-0">
+        <li class="breadcrumb-item"><a href="ShoppingCart.html">首頁</a></li>
+        <li class="breadcrumb-item"><a href="#">男士西裝</a></li>
+        <li class="breadcrumb-item active" aria-current="page">金牌西裝</li>
+      </ol>
+    </nav>
+    <div class="row my-5">
+      <div class="col-md-4">
+        <div class="sticky-top" style="top:10px;">
+          <h1 class="h2">金牌西裝</h1>
+          <div class="d-flex justify-content-end align-items-end">
+            <span class="text-muted">售價 NT$1,200</span>
+            <div class="h3 ml-auto mb-0 text-danger">
+              <small>特價 NT$</small>
+              <strong>520</strong>
+            </div>
+          </div>
+          <hr>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+						  <input type="radio" name="options" id="option1" autocomplete="off" checked>S
+						</label>
+            <label class="btn btn-secondary disabled">
+						  <input type="radio" name="options" id="option2" autocomplete="off" disabled>M
+						</label>
+            <label class="btn btn-secondary">
+						  <input type="radio" name="options" id="option3" autocomplete="off">L
+						</label>
+          </div>
+          <div class="input-group">
+            <div class="input-group my-3">
+              <select name="" id="" class="form-control">
+						    <option value="1">1 件</option>
+						    <option value="2">2 件</option>
+						    <option value="3">3 件</option>
+						    <option value="4">4 件</option>
+					    </select>
+              <a href="#" class="btn btn-primary">加入購物車</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="h2">帥氣西裝無人能敵</div>
+        <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quam pariatur necessitatibus eum optio veritatis officiis incidunt. Officia dolorum, fugiat deleniti enim praesentium cum fuga, aut nemo ab cumque libero?</p>
+        <h3 class="text-center my-4">合身剪裁</h3>
+        <img src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="golden-suit" style="width: 100%;">
+      </div>
+    </div>
+  </div>
+  <footer class="py-4 bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center">
+          © Copright 2017 六角血拼賣賣
+        </div>
+        <div class="col-12 text-center">
+          <a href="#" class="btn btn-link btn-sm text-info"><i class="fab fa-facebook mr-2"></i>Facebook</a>
+          <a href="#" class="btn btn-link btn-sm text-danger"><i class="fab fa-instagram mr-2"></i>Instagram</a>
+          <a href="#" class="btn btn-link btn-sm text-primary"><i class="fab fa-twitter mr-2"></i>Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- modal -->
+  <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h5 class="modal-title w-100 text-center text-white" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-outline-danger btn-remove" data-dismiss="modal">移除</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      // modal
+      $('#removeModal').on('show.bs.modal', function(e) {
+        var btn = $(e.relatedTarget)
+          // console.log('remove');
+        var title = btn.data('title')
+        console.log('title', title)
+        var modal = $(this)
+        modal.find('.modal-title').text('刪除 ' + title)
+        $('.btn-remove').click(function(e) {
+          e.preventDefault();
+          btn.parent().parent().hide();
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

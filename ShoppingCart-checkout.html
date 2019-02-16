@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="SHORTCUT ICON" href="https://cdn2.iconfinder.com/data/icons/hot-sale-flat/64/store_shop_sale_shop-512.png" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="custom.css">
+  <title>ShoppingCart-Product</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-heart mr-1 text-info"></i>六角血拼賣賣</a>
+    <div class="dropdown ml-auto" style="z-index: 10000">
+      <a class="btn btn-sm btn-cart" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-cart-plus text-dark fa-2x"></i>
+        <span class="badge badge-pill badge-danger">66</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right px-4 py-3 dropdown-media" style="min-width: 300px;">
+        <h6>已選擇商品</h6>
+        <table class="table table-sm">
+          <tbody>
+            <tr>
+              <th colspan="2" class="text-center name-media">商品名稱</th>
+              <th>數量</th>
+              <th class="text-center">小計</th>
+            </tr>
+            <tr>
+              <td class="align-middle text-center" width="10%"><a href="#" class="btn btn-link" data-toggle="modal" data-target="#removeModal" data-title="金牌西裝"><i class="far fa-trash-alt text-secondary"></i></a></td>
+              <td>
+                <a href="ShoppingCart-product.html" class="btn btn-link"><img class="small mr-3" src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">金牌西裝</a>
+              </td>
+              <td class="pt-2">1 件</td>
+              <td class="pt-2 text-right"><strong>$520</strong></td>
+            </tr>
+            <tr>
+              <td class="align-middle text-center"><a href="#" class="btn btn-link" data-toggle="modal" data-target="#removeModal" data-title="金牌女裝"><i class="far fa-trash-alt text-secondary"></i></a></td>
+              <td>
+                <a href="ShoppingCart-product.html" class="btn btn-link"><img class="small mr-3" src="https://images.unsplash.com/photo-1517836034914-40ef8d668510?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">金牌女裝</a>
+              </td>
+              <td class="pt-2">1 件</td>
+              <td class="pt-2 text-right"><strong>$480</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">運費</td>
+              <td class="text-right"><strong>$60</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">合計</td>
+              <td class="text-right"><strong>$1,060</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="ShoppingCart-checkout.html" class="btn btn-block btn-primary my-2">結帳去</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container main-content py-5">
+    <h1 class="text-center text-secondary mb-3">六角血拼 結帳</h1>
+    <div class="form-row text-center justify-content-center">
+      <div class="col-12 col-sm">
+        <div class="alert alert-success alert-round" role="alert">
+          1.需入訂單資料
+        </div>
+      </div>
+      <div class="col-12 col-sm">
+        <div class="alert alert-light alert-round" role="alert">
+          2.金流付款
+        </div>
+      </div>
+      <div class="col-12 col-sm">
+        <div class="alert alert-light alert-round" role="alert">
+          3.完成
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center my-3">
+      <div class="col-8">
+        <div class="accordion" id="accordionExample">
+          <div class="card border-0">
+            <div class="card-header" id="headingOne">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								顯示購物車細節
+							</button>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <h6 class="text-center my-3">已選擇商品</h6>
+              <div class="table-responsive">
+                <table class="table table-sm" style="min-width: 300px;">
+                  <tbody>
+                    <tr>
+                      <th colspan="2" class="text-center">商品名稱</th>
+                      <th width="10%">數量</th>
+                      <th class="text-center" width="10%">小計</th>
+                    </tr>
+                    <tr>
+                      <td class="align-middle text-center" width="5%"><a href="#" class="btn btn-link" data-toggle="modal" data-target="#removeModal" data-title="金牌西裝"><i class="far fa-trash-alt text-secondary"></i></a></td>
+                      <td>
+                        <a href="#" class="btn btn-link"><img class="small mr-3 img-thumbnail" src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">金牌西裝</a>
+                      </td>
+                      <td class="pt-2">1 件</td>
+                      <td class="pt-2 text-right"><strong>$520</strong></td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle text-center"><a href="#" class="btn btn-link" data-toggle="modal" data-target="#removeModal" data-title="金牌女裝"><i class="far fa-trash-alt text-secondary"></i></a></td>
+                      <td>
+                        <a href="s" class="btn btn-link"><img class="small mr-3 img-thumbnail" src="https://images.unsplash.com/photo-1517836034914-40ef8d668510?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">金牌女裝</a>
+                      </td>
+                      <td class="pt-2">1 件</td>
+                      <td class="pt-2 text-right"><strong>$480</strong></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" class="text-right">運費</td>
+                      <td class="text-right"><strong>$60</strong></td>
+                    </tr>
+                    <tr class="border-0">
+                      <td colspan="3" class="text-right">合計</td>
+                      <td class="text-right"><strong>$1,060</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <form class="my-5 needs-validation" novalidate>
+          <h2 class="text-center mb-3">訂購人資訊</h2>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">姓名</label>
+              <input type="name" class="form-control" id="inputEmail4" placeholder="請輸入真實姓名" required>
+              <div class="invalid-feedback">
+                請輸入姓名
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">E-mail</label>
+              <input type="email" class="form-control" id="inputPassword4" placeholder="請輸入電子信箱" required>
+              <div class="invalid-feedback">
+                請輸入電子郵件
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputAddress">國家</label>
+              <select id="inputAddress" class="form-control">
+								<option selected>臺灣 (中華民國)</option>
+								<option>美國</option>
+								<option>韓國</option>
+								<option>日本</option>
+								<option>香港</option>
+							</select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputAddress2">城市</label>
+              <select id="inputAddress2" class="form-control">
+        				<option selected>台北市</option>
+								<option>新北市</option>
+								<option>基隆市</option>
+								<option>桃園市</option>
+								<option>新竹縣</option>
+								<option>新竹市</option>
+								<option>苗栗縣</option>
+								<option>台中市</option>
+								<option>彰化縣</option>
+								<option>南投縣</option>
+								<option>雲林縣</option>
+								<option>嘉義縣</option>
+								<option>嘉義市</option>
+								<option>台南市</option>
+								<option>高雄市</option>
+								<option>屏東縣</option>
+								<option>台東縣</option>
+								<option>花蓮縣</option>
+								<option>宜蘭縣</option>
+								<option>澎湖縣</option>
+      				</select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputZip">郵遞區號</label>
+              <input type="text" class="form-control" id="inputZip" required>
+              <div class="invalid-feedback">
+                請輸入郵遞區號
+              </div>
+            </div>
+            <div class="form-group col-12">
+              <label for="Address">地址</label>
+              <input type="text" class="form-control" id="Address" placeholder="基隆路四段43號" required>
+              <div class="invalid-feedback">
+                請輸入地址
+              </div>
+            </div>
+            <div class="ml-auto my-3">
+              <a class="btn btn-secondary" href="ShoppingCart.html">繼續選購</a>
+              <button type="submit" class="btn btn-primary">確認付款</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="py-4 bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center">
+          © Copright 2017 六角血拼賣賣
+        </div>
+        <div class="col-12 text-center">
+          <a href="#" class="btn btn-link btn-sm text-info"><i class="fab fa-facebook mr-2"></i>Facebook</a>
+          <a href="#" class="btn btn-link btn-sm text-danger"><i class="fab fa-instagram mr-2"></i>Instagram</a>
+          <a href="#" class="btn btn-link btn-sm text-primary"><i class="fab fa-twitter mr-2"></i>Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- modal -->
+  <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h5 class="modal-title w-100 text-center text-white" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-outline-danger btn-remove" data-dismiss="modal">移除</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      // modal
+      $('#removeModal').on('show.bs.modal', function(e) {
+        var btn = $(e.relatedTarget)
+          // console.log('remove');
+        var title = btn.data('title')
+        console.log('title', title)
+        var modal = $(this)
+
+        modal.find('.modal-title').text('刪除 ' + title)
+
+        $('.btn-remove').click(function(e) {
+          e.preventDefault();
+          btn.parent().parent().hide();
+        });
+      });
+      // validation
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    })
+  </script>
+</body>
+
+</html>

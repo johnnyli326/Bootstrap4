@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="SHORTCUT ICON" href="https://cdn2.iconfinder.com/data/icons/hot-sale-flat/64/store_shop_sale_shop-512.png" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="custom.css">
+  <title>ShoppingCart</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><i class="fas fa-heart mr-1 text-info"></i>六角血拼賣賣</a>
+    <div class="dropdown ml-auto" style="z-index: 10000">
+      <a class="btn btn-sm btn-cart" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-cart-plus text-dark fa-2x"></i>
+        <span class="badge badge-pill badge-danger">66</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right px-4 py-3 dropdown-media" style="min-width: 300px;">
+        <h6>已選擇商品</h6>
+        <table class="table table-sm">
+          <tbody>
+            <tr>
+              <th colspan="2" class="text-center name-media">商品名稱</th>
+              <th>數量</th>
+              <th class="text-center">小計</th>
+            </tr>
+            <tr>
+              <td class="align-middle text-center" width="10%"><a href="#" class="btn btn-link" data-toggle="modal" data-target="#removeModal" data-title="金牌西裝"><i class="far fa-trash-alt text-secondary"></i></a></td>
+              <td>
+                <a href="ShoppingCart-product.html" class="btn btn-link"><img class="small mr-3" src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">金牌西裝</a>
+              </td>
+              <td class="pt-2">1 件</td>
+              <td class="pt-2 text-right"><strong>$520</strong></td>
+            </tr>
+            <tr>
+              <td class="align-middle text-center"><a href="#" class="btn btn-link" data-toggle="modal" data-target="#removeModal" data-title="金牌女裝"><i class="far fa-trash-alt text-secondary"></i></a></td>
+              <td>
+                <a href="ShoppingCart-product.html" class="btn btn-link"><img class="small mr-3" src="https://images.unsplash.com/photo-1517836034914-40ef8d668510?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">金牌女裝</a>
+              </td>
+              <td class="pt-2">1 件</td>
+              <td class="pt-2 text-right"><strong>$480</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">運費</td>
+              <td class="text-right"><strong>$60</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">合計</td>
+              <td class="text-right"><strong>$1,060</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="ShoppingCart-checkout.html" class="btn btn-block btn-primary my-2">結帳去</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron jumbotron-fluid jumbotron-bg d-flex align-items-end">
+    <div class="container text-black">
+      <div class="bg-lighter p-3">
+        <h1 class="display-3">買到吃手手<i class="fas fa-hand-holding-usd ml-2 text-secondary"></i></h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group sticky-top mb-4">
+          <a href="#pane-1" class="list-group-item list-group-item-action active" data-toggle="list">
+            <i class="fas fa-tshirt mr-2"></i>流行服飾
+          </a>
+          <a href="#pane-2" class="list-group-item list-group-item-action" data-toggle="list">
+            <i class="fas fa-home mr-2"></i>居家環境
+          </a>
+          <a href="#pane-3" class="list-group-item list-group-item-action" data-toggle="list">
+            <i class="fas fa-video mr-2"></i>影音商品
+          </a>
+          <a href="#pane-4" class="list-group-item list-group-item-action" data-toggle="list">
+            <i class="fas fa-dog mr-2"></i>寵物專用
+          </a>
+          <a href="#pane-5" class="list-group-item list-group-item-action" data-toggle="list">
+            <i class="fas fa-gift mr-2"></i>超值福袋
+          </a>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="tab-content">
+          <div class="tab-pane active" id="pane-1">
+            <div class="row">
+              <div class="col-12">
+                <form class="form-inline mb-4">
+                  <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width:200px">
+                    <button class="btn btn-success" type="submit">Search</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="cloth">
+                  <div class="card-body">
+                    <h4 class="card-title">經典素T</h4>
+                    <ul class="text-left list-unstyled">
+                      <li>✔純淨、自然、高品質</li>
+                      <li>✔高質感棉質　</li>
+                      <li>✔精梳柔棉無接縫</li>
+                      <li>✔極簡造型</li>
+                      <li>✔男女皆可穿</li>
+                    </ul>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <div class="btn-group btn-group-sm mb-2" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-outline-secondary">紅</button>
+                          <button type="button" class="btn btn-outline-secondary">橙</button>
+                          <button type="button" class="btn btn-outline-secondary">黃</button>
+                          <button type="button" class="btn btn-outline-secondary">綠</button>
+                          <button type="button" class="btn btn-outline-secondary">藍</button>
+                          <button type="button" class="btn btn-outline-secondary">靛</button>
+                          <button type="button" class="btn btn-outline-secondary">紫</button>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="btn-group btn-group-sm mb-2" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-outline-secondary">S</button>
+                          <button type="button" class="btn btn-outline-secondary">M</button>
+                          <button type="button" class="btn btn-outline-secondary">L</button>
+                          <button type="button" class="btn btn-outline-secondary">XL</button>
+                          <button type="button" class="btn btn-outline-secondary">2XL</button>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div>
+                          <a href="#" class="btn btn-primary btn-sm">結帳去</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-2" src="https://images.unsplash.com/photo-1491852807958-4326560208e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80" alt="cloth">
+                  <div class="card-body">
+                    <h4 class="card-title">時尚帽子</h4>
+                    <p class="card-text">
+                      <ul class="text-left list-unstyled">
+                        <li>✔針織手工帽子</li>
+                        <li>✔柔軟舒適</li>
+                        <li>✔單一尺寸</li>
+                        <li>✔日本設計師品牌</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <a href="#" class="btn btn-primary btn-sm">結帳去</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-3" src="https://images.unsplash.com/photo-1493568000180-ca2fb70ddcba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="cloth">
+                  <div class="card-body">
+                    <h4 class="card-title">保暖羽絨外套</h4>
+                    <p class="card-text">
+                      <ul class="text-left list-unstyled">
+                        <li>✔兼具機能性與時尚感</li>
+                        <li>✔保暖又有型</li>
+                        <li>✔顏色選擇多</li>
+                        <li>✔日本設計師品牌</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="btn-group btn-group-sm mb-2" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-outline-secondary">紅</button>
+                          <button type="button" class="btn btn-outline-secondary">藍</button>
+                          <button type="button" class="btn btn-outline-secondary">白</button>
+                          <button type="button" class="btn btn-outline-secondary">黑</button>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="btn-group btn-group-sm mb-2" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-outline-secondary">S</button>
+                          <button type="button" class="btn btn-outline-secondary">M</button>
+                          <button type="button" class="btn btn-outline-secondary">L</button>
+                          <button type="button" class="btn btn-outline-secondary">XL</button>
+                          <button type="button" class="btn btn-outline-secondary">2XL</button>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <a href="#" class="btn btn-primary btn-sm">結帳去</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-4" src="https://images.unsplash.com/photo-1510734790177-c931e3956547?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80" alt="cloth">
+                  <div class="card-body">
+                    <h4 class="card-title">丹寧牛仔褲</h4>
+                    <p class="card-text">
+                      <ul class="text-left list-unstyled">
+                        <li>✔素色質感修身牛仔褲</li>
+                        <li>✔中腰設計</li>
+                        <li>✔5 口袋設計</li>
+                        <li>✔混棉</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="btn-group btn-group-sm mb-2" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-outline-secondary">S</button>
+                      <button type="button" class="btn btn-outline-secondary">M</button>
+                      <button type="button" class="btn btn-outline-secondary">L</button>
+                      <button type="button" class="btn btn-outline-secondary">XL</button>
+                      <button type="button" class="btn btn-outline-secondary">2XL</button>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm">結帳去</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-5" src="https://images.unsplash.com/photo-1463100099107-aa0980c362e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="cloth">
+                  <div class="card-body">
+                    <h4 class="card-title">潮牌鞋子</h4>
+                    <p class="card-text">Converse代表永恒不滅的原創力，為全球年輕人展現自我、獨立精神的象徵符號。</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <a href="#" class="btn btn-primary btn-sm">結帳去</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-6" src="https://images.unsplash.com/photo-1535486648131-54a1558cb3fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="cloth">
+                  <div class="card-body">
+                    <h4 class="card-title">最舒適的襪子</h4>
+                    <p class="card-text">
+                      <ul class="text-left list-unstyled">
+                        <li>✔抑菌防臭機能</li>
+                        <li>✔穿著服貼舒適</li>
+                        <li>✔安心縫線</li>
+                        <li>✔內層毛圈布料</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="btn-group btn-group-sm mb-2" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-outline-secondary">S</button>
+                          <button type="button" class="btn btn-outline-secondary">M</button>
+                          <button type="button" class="btn btn-outline-secondary">L</button>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <a href="#" class="btn btn-primary btn-sm">結帳去</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="pane-2">
+            <div class="row">
+              <div class="col-12">
+                <form class="form-inline mb-4">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width:200px">
+                  <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1534152519866-4d57e8fc9bf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1670&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">居家日常</h4>
+                    <p class="card-text">清潔用品、洗曬用品、衛生紙、芳香、除濕...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <div>
+                          <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">寢具家飾</h4>
+                    <p class="card-text">床包被套、枕頭、窗簾、椅子...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <div>
+                          <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1514986888952-8cd320577b68?ixlib=rb-1.2.1&auto=format&fit=crop&w=1655&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">餐廚用具</h4>
+                    <p class="card-text">鍋具、刀具砧板、碗盤快匙、品牌餐具、杯瓶壺...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <div>
+                          <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">工具建材</h4>
+                    <p class="card-text">電動工具、手工具、木材、防水油漆...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <div>
+                          <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="pane-3">
+            <div class="row">
+              <div class="col-12">
+                <form class="form-inline mb-4">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width:200px">
+                  <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1527888477750-6fd34fbfa3f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">單眼相機</h4>
+                    <p class="card-text">
+                      Canon數位相機、Nikon數位相機、SONY數位相機...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <div>
+                          <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">電視螢幕</h4>
+                    <p class="card-text">Panasonic、SONY、禾聯HERAN、三星SAMSUNG...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center">
+                      <div class="col-12">
+                        <div>
+                          <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1531104985437-603d6490e6d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1623&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">音響設備</h4>
+                    <p class="card-text">Dynaudio丹拿、JBL.、Yamaha/山葉、ads 奧迪詩、Bose博士...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row justify-content-center">
+                      <div>
+                        <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">筆記型電腦</h4>
+                    <p class="card-text">聯想 (Lenovo)、戴爾 (Dell)、微軟 (Microsoft)、蘋果 (Apple)...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center justify-content-center">
+                      <div>
+                        <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1496957961599-e35b69ef5d7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">耳機</h4>
+                    <p class="card-text">森海塞爾、AKG愛科技、歌德、鐵三角...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center justify-content-center">
+                      <div>
+                        <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="pane-4">
+            <div class="row">
+              <div class="col-12">
+                <form class="form-inline mb-4">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width:200px">
+                  <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">飼料</h4>
+                    <p class="card-text">清潔用品、洗曬用品、衛生紙、芳香、除濕...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center justify-content-center">
+                      <div>
+                        <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1531531534025-0b78da954d21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">玩具訓練用品</h4>
+                    <p class="card-text">床包被套、枕頭、窗簾、椅子...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center justify-content-center">
+                      <div>
+                        <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center  h-100 border-0 box-shadow">
+                  <img class="card-img-top card-img-top-1" src="https://images.unsplash.com/photo-1509559320938-387dfd4e966b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="housework">
+                  <div class="card-body">
+                    <h4 class="card-title">服飾配件</h4>
+                    <p class="card-text">鍋具、刀具砧板、碗盤快匙、品牌餐具、杯瓶壺...</p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <div class="row text-center justify-content-center">
+                      <div>
+                        <a href="#" class="btn btn-primary btn-sm">商品資訊</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="pane-5">
+            <div class="row">
+              <div class="col-12">
+                <form class="form-inline mb-4">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width:200px">
+                  <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card text-center h-100 border-0 box-shadow">
+                  <img class="card-img-top" src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="cloth">
+                  <div class="card-body">
+                    <h4 class="card-title">超精緻禮物</h4>
+                    <p class="card-text">
+                      2018熱銷商品，一袋搞定！
+                    </p>
+                  </div>
+                  <div class="card-footer border-top-0 bg-white">
+                    <a href="#" class="btn btn-primary btn-sm">詳細資訊</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="py-4 bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center">
+          © Copright 2017 六角血拼賣賣
+        </div>
+        <div class="col-12 text-center">
+          <a href="#" class="btn btn-link btn-sm text-info"><i class="fab fa-facebook mr-2"></i>Facebook</a>
+          <a href="#" class="btn btn-link btn-sm text-danger"><i class="fab fa-instagram mr-2"></i>Instagram</a>
+          <a href="#" class="btn btn-link btn-sm text-primary"><i class="fab fa-twitter mr-2"></i>Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="large" id="large-1">
+    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">
+  </div>
+  <div class="large" id="large-2">
+    <img src="https://images.unsplash.com/photo-1491852807958-4326560208e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80" alt="">
+  </div>
+  <div class="large" id="large-3">
+    <img src="https://images.unsplash.com/photo-1493568000180-ca2fb70ddcba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">
+  </div>
+  <div class="large" id="large-4">
+    <img src="https://images.unsplash.com/photo-1510734790177-c931e3956547?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80" alt="">
+  </div>
+  <div class="large" id="large-5">
+    <img src="https://images.unsplash.com/photo-1463100099107-aa0980c362e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="">
+  </div>
+  <div class="large" id="large-6">
+    <img src="https://images.unsplash.com/photo-1535486648131-54a1558cb3fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">
+  </div>
+
+  <!-- modal -->
+  <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h5 class="modal-title w-100 text-center text-white" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-outline-danger btn-remove" data-dismiss="modal">移除</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $('.card-img-top-1').click(function(e) {
+        e.preventDefault();
+        $('#large-1').show(1);
+      });
+      $('#large-1').click(function(e) {
+        e.preventDefault();
+        $(this).hide();
+      });
+      $('.card-img-top-2').click(function(e) {
+        e.preventDefault();
+        $('#large-2').show(1);
+      });
+      $('#large-2').click(function(e) {
+        e.preventDefault();
+        $(this).hide();
+      });
+      $('.card-img-top-3').click(function(e) {
+        e.preventDefault();
+        $('#large-3').show(1);
+      });
+      $('#large-3').click(function(e) {
+        e.preventDefault();
+        $(this).hide();
+      });
+      $('.card-img-top-4').click(function(e) {
+        e.preventDefault();
+        $('#large-4').show(1);
+      });
+      $('#large-4').click(function(e) {
+        e.preventDefault();
+        $(this).hide();
+      });
+      $('.card-img-top-5').click(function(e) {
+        e.preventDefault();
+        $('#large-5').show(1);
+      });
+      $('#large-5').click(function(e) {
+        e.preventDefault();
+        $(this).hide();
+      });
+      $('.card-img-top-6').click(function(e) {
+        e.preventDefault();
+        $('#large-6').show(1);
+      });
+      $('#large-6').click(function(e) {
+        e.preventDefault();
+        $(this).hide();
+      });
+      // modal
+      $('#removeModal').on('show.bs.modal', function(e) {
+        var btn = $(e.relatedTarget)
+          // console.log('remove');
+        var title = btn.data('title')
+        console.log('title', title)
+        var modal = $(this)
+
+        modal.find('.modal-title').text('刪除 ' + title)
+
+        $('.btn-remove').click(function(e) {
+          e.preventDefault();
+          btn.parent().parent().hide();
+        });
+      });
+    })
+  </script>
+</body>
+
+</html>
